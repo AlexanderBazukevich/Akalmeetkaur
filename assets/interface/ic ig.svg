@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="21px" viewBox="0 0 20 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 53 (72520) - https://sketchapp.com -->
+    <title>F5D517C8-4E5C-46DE-A665-5B1C765B5C75</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1440" height="87"></rect>
+        <filter x="-0.5%" y="-5.7%" width="101.0%" height="116.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.079955201 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-1440" transform="translate(-1248.000000, -36.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1440" height="3355"></rect>
+            <g id="header">
+                <g>
+                    <g>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="ic-ig" transform="translate(1248.000000, 36.465909)" fill="#9D9D9D" fill-rule="nonzero">
+                        <path d="M10,8.073 C11.1043403,8.073 12,8.96821345 12,10.0727125 C12,11.1772116 11.1043403,12.073 10,12.073 C8.89565967,12.073 8,11.1777865 8,10.0727125 C8,8.96821345 8.89565967,8.073 10,8.073 Z M18,10.0385742 L18,14.852 C18,16.5906667 16.5906667,18 14.852,18 L5.19,18 C3.45133333,18 2,16.5906667 2,14.852 L2,10.0714518 C3.57845052,10.0495334 4.88400608,10.0499384 5.91666667,10.0726667 C5.91666667,12.322 7.74,14.1453333 9.98933333,14.1453333 C12.2386667,14.1453333 14.062,12.322 14.062,10.0726667 C15.3315391,10.0242222 16.6442057,10.0128581 18,10.0385742 Z M14.852,2 C10.7772726,2 7.60438368,2 5.33333333,2 C2.4905599,2 2,4.096 2,5.148 L2,7.33333333 L6.982,7.33333333 C7.76,6.47866667 8.84733333,6 9.98933333,6 C11.1373333,6 12.2233333,6.48333333 12.9966667,7.33333333 L18,7.33333333 L18,5.148 C18,3.40933333 16.5906667,2 14.852,2 Z M16,5.6325 C16,5.8355 15.8335,6 15.6275,6 L14.372,6 C14.1665,6 14,5.8355 14,5.6325 L14,4.3675 C14,4.1645 14.1665,4 14.372,4 L15.6275,4 C15.8335,4 16,4.1645 16,4.3675 L16,5.6325 Z" id="ic_ig"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

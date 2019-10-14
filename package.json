@@ -1,0 +1,28 @@
+{
+  "name": "akalmeetkaur",
+  "version": "1.0.0",
+  "description": "Web-site for yoga instructor",
+  "main": "index.html",
+  "dependencies": {
+    "less": "^3.10.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "lessc src/styles.less dist/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexanderBazukevich/Akalmeetkaur.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "yoga"
+  ],
+  "author": "Alexander Bazukevich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexanderBazukevich/Akalmeetkaur/issues"
+  },
+  "homepage": "https://github.com/AlexanderBazukevich/Akalmeetkaur#readme"
+}
