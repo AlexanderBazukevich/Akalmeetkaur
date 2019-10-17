@@ -1,0 +1,39 @@
+.cell {
+    max-width: calc((100% - 40px) / 3);
+    counter-increment: cellcount;
+
+    &:nth-child(1n+5) {
+        margin-top: 75px;
+    }
+
+    &__title {
+        position: relative;
+        margin: 45px 0 6px 0;
+        color: @text-color;
+        font-family: "PT Sans Caption";
+        font-size: 18px;
+        line-height: 24px;
+
+        &:after {
+            position: absolute;
+            top: -15px;
+            content: counter(cellcount);
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: @text-color-lite;
+            font-family: "Arial Black";
+            font-size: 118px;
+            text-align: right;
+            z-index: -1;
+        }
+    }
+
+    &__text {
+        margin: 0;
+        color: @text-color;
+        font-family: "Didact Gothic";
+        font-size: 16px;
+        line-height: 22px;
+    }
+}

@@ -1,0 +1,50 @@
+.section {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__image {
+        height: 600px;
+        max-width: 50%;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    &__picture {
+        height: auto;
+        max-width: 100%;
+    }
+
+    &__content {
+        max-width: 50%;
+        width: 100%;
+    }
+
+    &__title {
+        margin: 30px 70px 0 70px;
+        color: @text-color;
+        font-family: "PT Sans Caption";
+        font-size: 26px;
+        letter-spacing: 0.4px;
+        line-height: 34px;
+    }
+
+    &__text {
+        margin: 25px 0 0 70px;
+        color: @text-color;
+        font-family: "Didact Gothic";
+        font-size: 16px;
+        line-height: 22px;
+
+        &_gray {
+            margin-top: 0;
+            color: @accent-color-odd;
+            font-family: "Didact Gothic";
+            font-size: 16px;
+        }
+    }
+
+    &__purchase {
+        margin: 0 95px 0 70px;
+    }
+}

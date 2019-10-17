@@ -1,0 +1,36 @@
+.email {
+
+    &__text {
+        margin: 6px 0 20px 0;
+        color: #ACACAC;
+        font-family: "Didact Gothic";
+        font-size: 16px;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        max-width: calc(100% - 16px);
+        padding: 16px 0 16px 16px;
+        border-radius: 4px;
+        border: 1px solid #ACACAC;
+        color: #ACACAC;
+        font-family: "Didact Gothic";
+        font-size: 16px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        &:hover {
+            border: 1px solid @text-color;
+        }
+
+        &:focus {
+            border: 1px solid @active-color;
+        }
+
+        &:visited {
+            color: @text-color;
+        }
+    }
+}
