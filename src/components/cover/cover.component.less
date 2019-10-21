@@ -7,7 +7,7 @@
     }
 
     &__content {
-        @media (min-width: @sizes[tablet]) {
+        @media (min-width: @sizes[mobile]) {
             position: absolute;
             width: 591px;
             max-width: 50%;
@@ -38,12 +38,21 @@
     }
 
     &__image {
-        width: 100%;
-        max-width: 100%;
+        visibility: hidden;
 
-        @media (max-width: @sizes[tablet]) {
-            display: none;
+        @media (min-width: @sizes[tablet]) {
+            visibility: visible;
+            height: 600px;
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
         }
+    }
+
+    &__picture {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 
     &__square {
