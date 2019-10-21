@@ -9,4 +9,20 @@
     tablet: 768px;
     desktop: 1024px;
     desktop_hd: 1440px;
-  }
+}
+
+// TEMPLATE FOR COMPONENTS
+@media screen {
+    // desktop_hd
+    @media  (min-width: @sizes[desktop_hd]) {
+    }
+    // desktop
+    @media (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+    }
+    // tablet
+    @media (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+    }
+    // mobile
+    @media (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+    }
+}

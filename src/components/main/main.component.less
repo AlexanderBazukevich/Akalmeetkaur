@@ -1,23 +1,47 @@
+// .main {
+    // padding: 0 130px;
+
+    // & > * {
+    //     margin-bottom: 50px;
+    // }
+// }
+
+// @media (max-width: @sizes[tablet]) {
+//     .header:extend(.main) {}
+//     .footer:extend(.main) {}
+//     .main {
+//         padding: 0 20px;
+//     }
+// }
+
+// @media (max-width: @sizes[desktop]) {
+//     .header:extend(.main) {}
+//     .footer:extend(.main) {}
+//     .main {
+//         padding: 0 40px;
+//     }
+// }
+
+
 .main {
-    padding: 0 130px;
+    max-width: 1180px;
+    margin: 0 auto;
 
-    & > * {
-        margin-bottom: 50px;
-    }
-}
-
-@media (max-width: @sizes[tablet]) {
-    .header:extend(.main) {}
-    .footer:extend(.main) {}
-    .main {
-        padding: 0 20px;
-    }
-}
-
-@media (max-width: @sizes[desktop]) {
-    .header:extend(.main) {}
-    .footer:extend(.main) {}
-    .main {
-        padding: 0 40px;
+    @media screen {
+        // desktop_hd
+        @media  (min-width: @sizes[desktop_hd]) {
+        }
+        // desktop
+        @media (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+            padding: 0 40px;
+        }
+        // tablet
+        @media (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+            max-width: 1024px - 80px;
+            padding: 0 20px;
+        }
+        // mobile
+        @media (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+        }
     }
 }
