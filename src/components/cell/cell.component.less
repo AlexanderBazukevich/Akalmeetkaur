@@ -1,32 +1,52 @@
 .cell {
+    position: relative;
     max-width: calc((100% - 40px) / 3);
     counter-increment: cellcount;
 
-    &:nth-child(1n+5) {
-        margin-top: 75px;
+    &:before {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        content: counter(cellcount);
+        color: #E9E9E9;
+        font-family: "Arial Black";
+        font-size: 118px;
+        z-index: -1;
+    }
+
+    &:nth-child(n+5) {
+        @media (min-width: @sizes[tablet]) {
+            margin-top: 75px;
+        }
+    }
+
+    &:nth-child(n+4) {
+        @media (min-width: @sizes[mobile]) and (max-width: @sizes[tablet]) {
+            margin-top: 50px;
+        }
+    }
+
+    &:nth-child(n+3) {
+        @media (max-width: @sizes[mobile]) {
+            margin-top: 50px;
+        }
+    }
+
+    @media (max-width: @sizes[tablet]) {
+        max-width: calc((100% - 20px) / 2);
+    }
+
+    @media (max-width: @sizes[mobile]) {
+        max-width: 100%;
     }
 
     &__title {
-        position: relative;
+        width: 75%;
         margin: 45px 0 6px 0;
         color: @text-color;
         font-family: "PT Sans Caption";
         font-size: 18px;
         line-height: 24px;
-
-        &:after {
-            position: absolute;
-            top: -15px;
-            content: counter(cellcount);
-            display: block;
-            width: 100%;
-            height: 100%;
-            color: @text-color-lite;
-            font-family: "Arial Black";
-            font-size: 118px;
-            text-align: right;
-            z-index: -1;
-        }
     }
 
     &__text {

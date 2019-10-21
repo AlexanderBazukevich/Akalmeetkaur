@@ -7,14 +7,18 @@
     }
 
     &__content {
-        position: absolute;
-        width: 591px;
-        max-width: 50%;
-        z-index: 1;
+        @media (min-width: @sizes[tablet]) {
+            position: absolute;
+            width: 591px;
+            max-width: 50%;
+            box-sizing: border-box;
+            padding: 70px 70px 0 70px;
+            z-index: 1;
+        }
     }
 
     &__title {
-        margin: 70px 70px 0 70px;
+        margin: 0;
         color: #363B3C;
         font-family: "PT Sans Caption";
         font-size: 26px;
@@ -23,7 +27,7 @@
     }
 
     &__text {
-        margin: 20px 70px;
+        margin: 20px 0;
         color: #363B3C;
         font-family: "Didact Gothic";
         font-size: 16px;
@@ -31,12 +35,15 @@
     }
 
     &__button {
-        margin-left: 70px;
     }
-    
+
     &__image {
-        max-width: 100%;
         width: 100%;
+        max-width: 100%;
+
+        @media (max-width: @sizes[tablet]) {
+            display: none;
+        }
     }
 
     &__square {
@@ -46,5 +53,9 @@
         height: 100%;
         background-color: white;
         opacity: 0.5;
+
+        @media (max-width: @sizes[tablet]) {
+            display: none;
+        }
     }
 }

@@ -5,4 +5,18 @@
     height: 87px;
     padding: 0 130px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08);
+
+    @media (max-width: @sizes[tablet]) {
+        height: 62px;
+    }
+
+    &__menu {
+        justify-content: space-evenly;
+        margin-left: auto;
+        border-right: 1px solid #e4e4e4;
+
+        @media (max-width: @sizes[tablet]) {
+              visibility: hidden;
+        }
+    }
 }

@@ -4,10 +4,16 @@
 
     &__image {
         height: 600px;
+        min-width: 50%;
         max-width: 50%;
         width: 100%;
         text-align: center;
         overflow: hidden;
+
+        @media (max-width: @sizes[mobile]) {
+            min-width: 100%;
+            max-width: 100%;
+        }
     }
 
     &__picture {
@@ -18,10 +24,17 @@
     &__content {
         max-width: 50%;
         width: 100%;
+        box-sizing: border-box;
+        padding: 30px 70px 0 70px;
+
+        @media (max-width: @sizes[mobile]) {
+                padding: 0;
+                max-width: 100%;
+        }
     }
 
     &__title {
-        margin: 30px 70px 0 70px;
+        margin: 0;
         color: @text-color;
         font-family: "PT Sans Caption";
         font-size: 26px;
@@ -30,7 +43,7 @@
     }
 
     &__text {
-        margin: 25px 0 0 70px;
+        margin-top: 25px;
         color: @text-color;
         font-family: "Didact Gothic";
         font-size: 16px;
@@ -45,6 +58,15 @@
     }
 
     &__purchase {
-        margin: 0 95px 0 70px;
+        margin-right: 95px;
+    }
+
+    @media (max-width: @sizes[mobile]) {
+        flex-direction: column;
+        align-items: center;
+
+        &__image {
+            height: auto;
+        }
     }
 }
