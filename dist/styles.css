@@ -375,13 +375,18 @@ body {
   line-height: 15px;
 }
 .main {
-  max-width: 1180px;
   margin: 0 auto;
 }
 @media screen {
 }
+@media screen and (min-width: 1440px) {
+  .main {
+    max-width: 1360px;
+  }
+}
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   .main {
+    max-width: 1360px;
     padding: 0 40px;
   }
 }
