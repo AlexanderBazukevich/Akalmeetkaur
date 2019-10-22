@@ -12,7 +12,7 @@
         margin: 0 auto;
     }
 
-    @media (max-width: @sizes[tablet]) {
+    @media screen and (max-width: @sizes[tablet] - 1) {
         height: 62px;
     }
 
@@ -21,7 +21,7 @@
         margin-left: auto;
         border-right: 1px solid #e4e4e4;
 
-        @media (max-width: @sizes[tablet]) {
+        @media screen and (max-width: @sizes[tablet] - 1) {
               visibility: hidden;
         }
     }

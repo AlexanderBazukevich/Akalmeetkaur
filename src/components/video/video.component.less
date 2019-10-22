@@ -7,12 +7,13 @@
     box-sizing: border-box;
     background-color: #F2F2F2;
 
-    @media (max-width: @sizes[mobile]) {
+    @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
         max-width: 100%;
     }
 
     &:nth-child(n+3) {
-        @media (min-width: @sizes[mobile]){
+
+        @media screen and (min-width: @sizes[tablet]) {
             margin-top: 20px;
         }
     }
@@ -23,7 +24,7 @@
         background-repeat: no-repeat;
         background-size: cover;
 
-        @media (max-width: @sizes[mobile]){
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             margin-top: 20px;
         }
     }

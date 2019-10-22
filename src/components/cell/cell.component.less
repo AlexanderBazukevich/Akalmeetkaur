@@ -15,28 +15,28 @@
     }
 
     &:nth-child(n+5) {
-        @media (min-width: @sizes[tablet]) {
+        @media screen and (min-width: @sizes[desktop]) {
             margin-top: 75px;
         }
     }
 
     &:nth-child(n+4) {
-        @media (min-width: @sizes[mobile]) and (max-width: @sizes[tablet]) {
+        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
             margin-top: 50px;
         }
     }
 
     &:nth-child(n+3) {
-        @media (max-width: @sizes[mobile]) {
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] -1) {
             margin-top: 50px;
         }
     }
 
-    @media (max-width: @sizes[tablet]) {
+    @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
         max-width: calc((100% - 20px) / 2);
     }
 
-    @media (max-width: @sizes[mobile]) {
+    @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
         max-width: 100%;
     }
 

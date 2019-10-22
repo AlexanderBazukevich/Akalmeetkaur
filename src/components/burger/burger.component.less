@@ -1,6 +1,7 @@
 .burger {
     position: absolute;
     right: 0;
+    top: 0;
     width: 62px;
     height: 62px;
     background-color: #F9F9F9;
@@ -8,7 +9,7 @@
     background-position: center center;
     background-repeat: no-repeat;
 
-    @media (min-width: @sizes[tablet]) {
+    @media screen and (min-width: @sizes[tablet]) {
             visibility: hidden;
     }
 }
