@@ -33,20 +33,51 @@
         margin: 0;
         color: #363B3C;
         font-family: "PT Sans Caption";
-        font-size: 26px;
-        letter-spacing: 0.4px;
-        line-height: 34px;
+
+        @media screen and (min-width: @sizes[desktop]) {
+            font-size: 26px;
+            letter-spacing: 0.4px;
+            line-height: 34px;
+        }
+
+        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+            font-size: 24px;
+            letter-spacing: 0.37px;
+            line-height: 30px;
+        }
+
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+            font-size: 20px;
+            letter-spacing: 0.31px;
+            line-height: 24px;
+        }
     }
 
     &__text {
         margin: 20px 0;
         color: #363B3C;
         font-family: "Didact Gothic";
-        font-size: 16px;
-        line-height: 23px;
+
+        @media screen and (min-width: @sizes[desktop]) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+            font-size: 15px;
+            line-height: 20px;
+        }
     }
 
     &__button {
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+            display: none;
+        }
     }
 
     &__image {
