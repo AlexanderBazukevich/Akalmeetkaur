@@ -1,7 +1,9 @@
 .social {
-    display: flex;
+    @media screen and (min-width: @sizes[desktop]) {
+        display: flex;
+    }
 
-    @media screen and (max-width: @sizes[tablet] - 1) {
+    @media screen and (max-width: @sizes[desktop] - 1) {
         display: none;
     }
 
