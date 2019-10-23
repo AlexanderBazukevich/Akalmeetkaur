@@ -38,8 +38,14 @@
         content: "";
         display: block;
         height: 1px;
-        width: calc((100% - 325px) /2);
         background-color: @accent-color-odd;
+
+            @media screen and (min-width: 768px) {
+                width: calc((100% - 325px) / 2);
+            }
+            @media screen and (min-width: 320px) and (max-width: 767px) {
+                width: calc((100% - 250px) / 2);
+            }
         }
 
         &:after {

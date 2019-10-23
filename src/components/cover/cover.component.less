@@ -2,24 +2,17 @@
     position: relative;
     font-size: 0;
 
-    &:first-child {
-        margin-top: 50px;
-    }
-
     &__content {
 
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             padding: 0;
         }
-
         @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
             padding: 70px 40px 0 40px;
         }
-
         @media screen and (min-width: @sizes[desktop]) {
             padding: 70px 70px 0 70px;
         }
-
         @media screen and (min-width: @sizes[tablet]) {
             position: absolute;
             width: 50%;
@@ -39,13 +32,11 @@
             letter-spacing: 0.4px;
             line-height: 34px;
         }
-
         @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
             font-size: 24px;
             letter-spacing: 0.37px;
             line-height: 30px;
         }
-
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             font-size: 20px;
             letter-spacing: 0.31px;
@@ -54,7 +45,7 @@
     }
 
     &__text {
-        margin: 20px 0;
+        margin: 19px 0 27px 0;
         color: #363B3C;
         font-family: "Didact Gothic";
 
@@ -62,12 +53,10 @@
             font-size: 16px;
             line-height: 22px;
         }
-
         @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
             font-size: 14px;
             line-height: 20px;
         }
-
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             font-size: 15px;
             line-height: 20px;
@@ -75,18 +64,25 @@
     }
 
     &__button {
+        @media screen and (min-width: @sizes[desktop_hd]) {
+            padding: 12px 26px;
+        }
+        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop_hd] - 1) {
+            padding: 12px 15px;
+        }
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             display: none;
         }
     }
 
     &__image {
-        display: none;
-
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+            display: none;
+        }
         @media screen and (min-width: @sizes[tablet]) {
             position: relative;
             display: block;
-            height: 600px;
+            height: 534px;
             width: 100%;
             max-width: 100%;
             overflow: hidden;
@@ -95,9 +91,15 @@
 
     &__picture {
         position: absolute;
-        height: 100%;
+        height: calc(100% + 1px);
         z-index: -1;
-        right: calc(0px - 100px);
+
+        @media screen and (min-width: @sizes[desktop] + 1) {
+            right: 0;
+        }
+        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop]) {
+            right: -100px;
+        }
     }
 
     &__square {

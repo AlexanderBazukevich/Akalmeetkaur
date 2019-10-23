@@ -1,24 +1,17 @@
 .video {
     position: relative;
     height: 300px;
+    margin-top: 20px;
     padding: 50px 20px;
     box-sizing: border-box;
     background-color: #F2F2F2;
 
     @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
-        max-width: 100%;
-
-        &:nth-child(n+2) {
-            margin-top: 20px;
-        }
+        width: 100%;
     }
 
     @media screen and (min-width: @sizes[tablet]) {
         max-width: calc((100% - 20px) / 2);
-
-        &:nth-child(n+3) {
-            margin-top: 20px;
-        }
     }
 
     &:nth-child(n+2) {
@@ -26,10 +19,6 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-
-        // @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
-        //     margin-top: 20px;
-        // }
     }
 
     &__overlay {
@@ -69,6 +58,7 @@
 
     &__text {
         position: relative;
+        margin: 10px 0 23px 0;
         color: #ffffff;
         font-family: "Didact Gothic";
         font-size: 16px;

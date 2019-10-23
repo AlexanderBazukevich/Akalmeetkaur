@@ -9,6 +9,19 @@
         align-items: center;
         margin: 0 auto;
 
+        @media screen and (min-width: @sizes[desktop_hd]) {
+            margin: 0 auto 50px;
+        }
+        @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+                margin: 0 auto 31px;
+        }
+        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+                margin: 0 auto 20px;
+        }
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+                margin: 0 auto 33px;
+        }
+
         @media screen and (min-width: @sizes[desktop]) {
             height: 87px;
             max-width: 1440px - 260px;
