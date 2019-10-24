@@ -3,6 +3,7 @@
     font-size: 0;
 
     &__content {
+        background: rgba(255, 255, 255, 0.5);
 
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             padding: 0;
@@ -15,10 +16,10 @@
         }
         @media screen and (min-width: @sizes[tablet]) {
             position: absolute;
+            height: 534px;
             width: 50%;
             max-width: 50%;
             box-sizing: border-box;
-            z-index: 1;
         }
     }
 
@@ -30,17 +31,14 @@
         @media screen and (min-width: @sizes[desktop]) {
             font-size: 26px;
             letter-spacing: 0.4px;
-            line-height: 34px;
         }
         @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
             font-size: 24px;
             letter-spacing: 0.37px;
-            line-height: 30px;
         }
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             font-size: 20px;
             letter-spacing: 0.31px;
-            line-height: 24px;
         }
     }
 
@@ -51,15 +49,12 @@
 
         @media screen and (min-width: @sizes[desktop]) {
             font-size: 16px;
-            line-height: 22px;
         }
         @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
             font-size: 14px;
-            line-height: 20px;
         }
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             font-size: 15px;
-            line-height: 20px;
         }
     }
 
@@ -99,19 +94,6 @@
         }
         @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop]) {
             right: -100px;
-        }
-    }
-
-    &__square {
-        position: absolute;
-        width: 50%;
-        max-width: 50%;
-        height: 100%;
-        background-color: white;
-        opacity: 0.5;
-
-        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
-            display: none;
         }
     }
 }
