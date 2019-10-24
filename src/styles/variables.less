@@ -26,3 +26,18 @@
     @media (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
     }
 }
+
+
+// MIXINS
+.link() {
+    &:hover {
+        background-color: @hover-color;
+    }
+
+    &:active {
+        &:hover {
+            background-color: initial;
+        }
+        color: @active-color;
+    }
+}

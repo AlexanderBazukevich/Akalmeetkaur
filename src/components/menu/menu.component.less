@@ -1,28 +1,30 @@
 .menu {
-
     &__item {
-        margin: 7px 0 0 0;
-        padding: 7px 17.3px;
         color: @text-color;
         font-family: "PT Sans Caption";
-        font-size: 15px;
-        letter-spacing: 0.3px;
-        text-align: left;
         text-decoration: none;
 
-        &_vertical {
-            margin: 0 0 40px 0;
+        // mixin
+        .link();
+
+
+        // 320 to desktop - 1
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[desktop] - 1) {
+            display: block;
+            font-size: 17px;
+            letter-spacing: 0.34px;
+
+            // padding: ?px ?px;
+            // margin: ? ?
         }
 
-        &:hover {
-            background-color: @hover-color;
-        }
-
-        &:active {
-            &:hover {
-                background-color: white;
-            }
-            color: @active-color;
+        // desktop+
+        @media screen and (min-width: @sizes[desktop]) {
+            display: inline-block;
+            margin: 6px 0 0 0;
+            padding: 7px 15.5px;
+            font-size: 15px;
+            letter-spacing: 0.3px;
         }
     }
 }
