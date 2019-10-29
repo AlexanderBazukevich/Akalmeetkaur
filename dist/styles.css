@@ -23,7 +23,7 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   body {
-    background-image: url("/assets/sidebar.jpg");
+    background-image: url("/assets/index\(tablet\).jpg");
     background-size: 768px auto;
   }
 }
@@ -31,6 +31,7 @@ body {
   body {
     background-image: url("/assets/index\(mobile\).jpg");
     background-size: 320px auto;
+    background-position-y: -64px;
   }
 }
 .aside {
@@ -63,12 +64,22 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  width: 62px;
-  height: 62px;
   background-color: #F9F9F9;
   background-image: url(/assets/interface/ic_menu_burger.svg);
   background-position: center center;
   background-repeat: no-repeat;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .burger {
+    width: 49px;
+    height: 49px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .burger {
+    width: 62px;
+    height: 62px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .burger {
@@ -438,24 +449,24 @@ body {
   align-items: center;
   margin: 0 auto;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .header__content {
-    margin: 0 auto 50px;
+    height: 49px;
+    margin: 0 auto 33px;
+    padding: 0 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header__content {
+    height: 62px;
+    max-width: 944px;
+    margin: 0 auto 20px;
+    padding: 0 20px;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   .header__content {
     margin: 0 auto 31px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .header__content {
-    margin: 0 auto 20px;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .header__content {
-    margin: 0 auto 33px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -465,20 +476,12 @@ body {
     padding: 0 40px;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (min-width: 1440px) {
   .header__content {
-    height: 62px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .header__content {
-    max-width: 944px;
-    padding: 0 20px;
+    margin: 0 auto 50px;
   }
 }
 .header__menu {
-  margin-left: auto;
-  padding: 0 21px;
   border-right: 1px solid #e4e4e4;
 }
 @media screen and (max-width: 1023px) {
@@ -486,20 +489,58 @@ body {
     display: none;
   }
 }
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .header__menu {
+    margin: 3px 6px 0 auto;
+    padding: 0 19px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header__menu {
+    margin: 3px 5px 0 auto;
+    padding: 0 18px;
+  }
+}
 .logo {
   display: flex;
   text-decoration: none;
 }
-.logo__image {
-  margin: 0 10px;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .logo__image {
+    width: 24px;
+    height: 26px;
+    margin: 6px 10px 0 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .logo__image {
+    width: 27px;
+    height: 36px;
+    margin: 0 10px 0 1px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .logo__image {
+    margin: 0 13px 0 2px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .logo__image {
+    width: 33px;
+    height: 36px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .logo__image {
+    margin: 0 13px 0 10px;
+  }
 }
 .logo__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: block;
   font-family: "PT Sans Caption";
 }
 .logo__text_big {
+  margin: 4px 0 -2px;
   font-size: 14px;
   letter-spacing: 1.79px;
   text-transform: uppercase;
@@ -513,8 +554,17 @@ body {
 }
 .logo__text_small_gray {
   color: #B3B3B3;
-  font-size: 12px;
   letter-spacing: 0.9px;
+}
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+  .logo__text_small_gray {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .logo__text_small_gray {
+    font-size: 12px;
+  }
 }
 .main {
   margin: 0 auto;
@@ -570,7 +620,7 @@ body {
 @media screen and (min-width: 1024px) {
   .menu__item {
     display: inline-block;
-    margin: 6px 0 0 0;
+    margin: 3px 0 0 0;
     padding: 0 15.5px;
     font-size: 15px;
     letter-spacing: 0.3px;
