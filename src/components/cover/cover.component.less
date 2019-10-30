@@ -9,10 +9,16 @@
             padding: 0;
         }
         @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
-            padding: 70px 40px 0 40px;
+            height: 534px;
+            padding: 71px 42px 0 42px;
         }
-        @media screen and (min-width: @sizes[desktop]) {
-            padding: 70px 70px 0 70px;
+        @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+            height: 534px;
+            padding: 72px 72px 0 72px;
+        }
+        @media screen and (min-width: @sizes[desktop_hd] - 1) {
+            height: 528px;
+            padding: 72px 70px 0 70px;
         }
         @media screen and (min-width: @sizes[tablet]) {
             position: absolute;
@@ -31,69 +37,102 @@
         @media screen and (min-width: @sizes[desktop]) {
             font-size: 26px;
             letter-spacing: 0.4px;
+            line-height: 1.3em;
         }
         @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
             font-size: 24px;
             letter-spacing: 0.37px;
+            line-height: 1.3em;
         }
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             font-size: 20px;
             letter-spacing: 0.31px;
+            line-height: 1.17em;
         }
     }
 
     &__text {
-        margin: 19px 0 27px 0;
         color: #363B3C;
         font-family: "Didact Gothic";
 
-        @media screen and (min-width: @sizes[desktop]) {
-            font-size: 16px;
-        }
-        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
-            font-size: 14px;
-        }
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+            margin: 18px 0 23px 0;
             font-size: 15px;
+            line-height: 1.34em;
+        }
+
+        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+            margin: 17px 0 20px 0;
+            font-size: 14px;
+            line-height: 1.42em;
+        }
+
+        @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+            margin: 19px 0 23px 0;
+            font-size: 16px;
+            line-height: 1.37em;
+        }
+
+        @media screen and (min-width: @sizes[desktop_hd]) {
+            margin: 19px 0 27px 0;
+            font-size: 16px;
+            line-height: 1.37em;
         }
     }
 
     &__button {
-        @media screen and (min-width: @sizes[desktop_hd]) {
-            padding: 12px 26px;
-        }
-        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop_hd] - 1) {
-            padding: 12px 15px;
-        }
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             display: none;
+        }
+
+        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+            padding: 12px 13px;
+        }
+
+        @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+            padding: 12px 15px;
+        }
+
+        @media screen and (min-width: @sizes[desktop_hd]) {
+            padding: 11px 25px;
         }
     }
 
     &__image {
+        position: relative;
+        overflow: hidden;
+
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             display: none;
         }
-        @media screen and (min-width: @sizes[tablet]) {
-            position: relative;
-            display: block;
+
+        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop_hd] - 1) {
             height: 534px;
-            width: 100%;
-            max-width: 100%;
-            overflow: hidden;
+        }
+
+        @media screen and (min-width: @sizes[desktop_hd]) {
+            height: 528px;
         }
     }
 
     &__picture {
         position: absolute;
-        height: calc(100% + 1px);
         z-index: -1;
 
-        @media screen and (min-width: @sizes[desktop] + 1) {
-            right: 0;
+        @media screen and (min-width: @sizes[tablet]) and (max-width: 899px) {
+            right: -113px;
         }
-        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop]) {
-            right: -100px;
+
+        @media screen and (min-width: 900px) and (max-width: 1199px) {
+            right: -94px;
+        }
+
+        @media screen and (min-width: 1200) and (max-width: @sizes[desktop_hd]) {
+            right: -50px;
+        }
+        @media screen and (min-width: @sizes[desktop_hd]) {
+          right: -1px;
+          top: -3px;
         }
     }
 }
