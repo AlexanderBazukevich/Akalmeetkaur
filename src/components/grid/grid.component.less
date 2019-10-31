@@ -3,30 +3,41 @@
     flex-wrap: wrap;
     justify-content: space-between;
     counter-reset: cellcount;
-    padding-top: 50px;
+    padding-top: 51px;
 
     &__title {
         position: relative;
         width: 100%;
-        margin: 0 0 25px;
+        margin: 0;
         text-align: center;
         color: #363B3C;
         font-family: "PT Sans Caption";
 
-        @media screen and (min-width: @sizes[desktop]) {
+        //mobile - tablet
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+            margin-bottom: 32px;
+            font-size: 20px;
+            letter-spacing: 0.31px;
+        }
+        //tablet - desktop
+        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+            margin-bottom: 78px;
+            font-size: 24px;
+            letter-spacing: 0.37px;
+        }
+        //desktop - desktop_hd
+        @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+            margin-bottom: 76px;
+            font-size: 26px;
+            letter-spacing: 0.4px;
+        }
+        //desktop_hd +
+        @media screen and (min-width: @sizes[desktop_hd] - 1) {
+            margin-bottom: 74px;
             font-size: 26px;
             letter-spacing: 0.4px;
         }
 
-        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
-            font-size: 24px;
-            letter-spacing: 0.37px;
-        }
-
-        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
-            font-size: 20px;
-            letter-spacing: 0.31px;
-        }
 
         &:before,
         &:after {
@@ -36,12 +47,13 @@
         display: block;
         height: 1px;
         background-color: @accent-color-odd;
-
-            @media screen and (min-width: 768px) {
-                width: calc((100% - 325px) / 2);
-            }
-            @media screen and (min-width: 320px) and (max-width: 767px) {
+            //mobile - tablet
+            @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
                 width: calc((100% - 250px) / 2);
+            }
+            //tablet +
+            @media screen and (min-width: @sizes[tablet]) {
+                width: calc((100% - 325px) / 2);
             }
         }
 

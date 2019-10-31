@@ -4,53 +4,82 @@
 
     @media screen and (min-width: @sizes[desktop]) {
         max-width: calc((100% - 40px) / 3);
-
-        &:nth-child(n+5) {
-            margin-top: 75px;
-        }
     }
 
+    &:nth-child(n+5) {
+        //desktop - desktop_hd
+        @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+            margin-top: 102px;
+        }
+        //desktop_hd +
+        @media screen and (min-width: @sizes[desktop_hd] - 1) {
+            margin-top: 120px;
+        }
+    }
+    //tablet - desktop
     @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
         max-width: calc((100% - 20px) / 2);
 
         &:nth-child(n+4) {
-                margin-top: 50px;
-            }
+            margin-top: 80px;
         }
-
-    @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] -1) {
+        &:nth-child(n+6) {
+            margin-top: 93px;
+        }
+    }
+    //mobile - tablet
+    @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
         max-width: 100%;
 
         &:nth-child(n+3) {
-            margin-top: 50px;
+            margin-top: 44px;
+        }
+        &:nth-child(n+5) {
+            margin-top: 39px;
         }
     }
 
     &:before {
         position: absolute;
         right: 0;
-        top: 0;
         content: counter(cellcount);
         color: #E9E9E9;
         font-family: "Arial Black";
         line-height: 1;
         z-index: -1;
-
-        @media screen and (min-width: @sizes[tablet]) {
-            font-size: 118px;
-        }
-
+        //mobile - tablet
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+            top: -27px;
             font-size: 78px;
+        }
+        //tablet +
+        @media screen and (min-width: @sizes[tablet]) {
+            top: -62px;
+            font-size: 118px;
         }
     }
 
     &__title {
-        width: 75%;
-        margin: 45px 0 6px 0;
+        width: 71%;
         color: @text-color;
         font-family: "PT Sans Caption";
         font-size: 18px;
+            //mobile - tablet
+            @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+                margin: 0 0 10px 0;
+            }
+            //tablet - desktop
+            @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+                margin: 0 0 10px 0;
+            }
+            //desktop - desktop_hd
+            @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+                margin: 0 0 10px 0;
+            }
+            //desktop_hd +
+            @media screen and (min-width: @sizes[desktop_hd] - 1) {
+                margin: 0 0 9px 0;
+            }
     }
 
     &__text {

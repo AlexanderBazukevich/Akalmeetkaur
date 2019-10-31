@@ -4,22 +4,26 @@
 
     &__content {
         background: rgba(255, 255, 255, 0.5);
-
+        //mobile - tablet
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             padding: 0;
         }
+        //tablet - desktop
         @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
             height: 534px;
             padding: 71px 42px 0 42px;
         }
+        //desktop - desktop_hd
         @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
             height: 534px;
             padding: 72px 72px 0 72px;
         }
+        //desktop_hd +
         @media screen and (min-width: @sizes[desktop_hd] - 1) {
             height: 528px;
             padding: 72px 70px 0 70px;
         }
+        //tablet +
         @media screen and (min-width: @sizes[tablet]) {
             position: absolute;
             height: 534px;
