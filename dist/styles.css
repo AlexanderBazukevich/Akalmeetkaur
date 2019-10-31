@@ -5,6 +5,7 @@ body {
   margin: 0;
   background-position: center top;
   background-repeat: no-repeat;
+  opacity: 0.5;
 }
 @media screen {
 }
@@ -24,6 +25,13 @@ body {
   body {
     background-image: url("/assets/index\(tablet\).jpg");
     background-size: 768px auto;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  body {
+    background-image: url("/assets/index\(mobile\).jpg");
+    background-size: 320px auto;
+    background-position-y: -64px;
   }
 }
 .aside {
@@ -727,14 +735,14 @@ body {
     align-items: center;
     padding-top: 19px;
   }
+  .section:nth-child(n+3) .section__image {
+    display: none;
+  }
 }
 @media screen and (min-width: 768px) {
   .section {
     padding-top: 50px;
   }
-}
-.section:nth-child(n+3) .section__image {
-  display: none;
 }
 .section__image {
   position: relative;

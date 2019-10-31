@@ -7,17 +7,17 @@
         flex-direction: column;
         align-items: center;
         padding-top: 19px;
-    }
-    //tablet +
-    @media screen and (min-width: @sizes[tablet]) {
-        padding-top: 50px;
-    }
 
         &:nth-child(n+3) {
             .section__image {
                 display: none;
             }
         }
+    }
+    //tablet +
+    @media screen and (min-width: @sizes[tablet]) {
+        padding-top: 50px;
+    }
 
     &__image {
         position: relative;
