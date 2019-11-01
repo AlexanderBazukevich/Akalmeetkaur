@@ -1,43 +1,79 @@
-.grid {
+.gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     counter-reset: cellcount;
-    padding-top: 51px;
+
+    &__article {
+        //mobile - tablet
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+            padding-top: 48px;
+        }
+        //tablet - desktop
+        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+            padding-top: 51px;
+        }
+        //desktop - desktop_hd
+        @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+            padding-top: 58px;
+        }
+        //desktop_hd +
+        @media screen and (min-width: @sizes[desktop_hd] - 1) {
+            padding-top: 53px;
+        }
+    }
+
+    &__video {
+        //mobile - tablet
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+            padding-top: 46px;
+        }
+        //tablet - desktop
+        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+            padding-top: 85px;
+        }
+        //desktop - desktop_hd
+        @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+            padding-top: 63px;
+        }
+        //desktop_hd +
+        @media screen and (min-width: @sizes[desktop_hd] - 1) {
+            padding-top: 53px;
+        }
+
+    }
 
     &__title {
         position: relative;
         width: 100%;
-        margin: 0;
         text-align: center;
         color: #363B3C;
         font-family: "PT Sans Caption";
 
         //mobile - tablet
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
-            margin-bottom: 32px;
+            margin: 0 0 34px 0;
             font-size: 20px;
             letter-spacing: 0.31px;
         }
         //tablet - desktop
         @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
-            margin-bottom: 78px;
+            margin: 0 0 78px 0;
             font-size: 24px;
             letter-spacing: 0.37px;
         }
         //desktop - desktop_hd
         @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
-            margin-bottom: 76px;
+            margin: -6px 0 76px 0;
             font-size: 26px;
             letter-spacing: 0.4px;
         }
         //desktop_hd +
         @media screen and (min-width: @sizes[desktop_hd] - 1) {
-            margin-bottom: 74px;
+            margin: -1px 0 73px 0;
             font-size: 26px;
             letter-spacing: 0.4px;
         }
-
 
         &:before,
         &:after {

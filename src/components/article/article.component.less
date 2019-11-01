@@ -1,6 +1,6 @@
-.cell {
+.article {
     position: relative;
-    counter-increment: cellcount;
+    counter-increment: articlecount;
 
     @media screen and (min-width: @sizes[desktop]) {
         max-width: calc((100% - 40px) / 3);
@@ -42,7 +42,7 @@
     &:before {
         position: absolute;
         right: 0;
-        content: counter(cellcount);
+        content: counter(articlecount);
         color: #E9E9E9;
         font-family: "Arial Black";
         line-height: 1;

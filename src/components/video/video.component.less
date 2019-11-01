@@ -1,17 +1,28 @@
 .video {
     position: relative;
-    height: 300px;
+    // height: 300px;
     margin-top: 20px;
-    padding: 50px 20px;
+    // padding: 50px 20px;
     box-sizing: border-box;
     background-color: #F2F2F2;
-
+    //mobile - tablet
     @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+        height: 248px;
         width: 100%;
+        padding: 22px 10px 0 30px;
     }
-
+    //tablet +
     @media screen and (min-width: @sizes[tablet]) {
         max-width: calc((100% - 20px) / 2);
+    }
+    //tablet - desktop_hd
+    @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop_hd] - 1) {
+        height: 300px;
+        padding: 54px 30px;
+    }
+    @media screen and (min-width: @sizes[desktop_hd]) {
+        height: 296px;
+        padding: 54px 30px;
     }
 
     &:nth-child(n+2) {
@@ -41,6 +52,15 @@
 
         &_dark {
             color: #363B3C;
+
+            //mobile - tablet
+            @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+                margin: 0px 0 10px 0;
+            }
+            //tablet +
+            @media screen and (min-width: @sizes[tablet]) {
+                margin: -3px 0 17px 0;
+            }
         }
 
         &:after {
