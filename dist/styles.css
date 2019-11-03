@@ -23,7 +23,7 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   body {
-    background-image: url("/assets/index\(tablet\).jpg");
+    background-image: url("/assets/sidebar.jpg");
     background-size: 768px auto;
   }
 }
@@ -49,7 +49,7 @@ body {
 @media (min-width: 768px) and (max-width: 1023px) {
   .aside {
     width: 304px;
-    padding: 44px;
+    padding: 42px;
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
@@ -58,7 +58,10 @@ body {
   }
 }
 .aside__menu {
-  margin: -6px 0 auto 0;
+  margin: -4px 0 auto 2px;
+}
+.aside__copyright {
+  padding: 20px 0;
 }
 .burger {
   position: absolute;
@@ -227,7 +230,6 @@ body {
   font-size: 16px;
 }
 .copyright {
-  padding: 20px 0;
   color: #ACACAC;
   font-family: "Didact Gothic";
   font-size: 16px;
@@ -448,12 +450,31 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 87px;
-  margin: 45px auto 0;
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .footer__content {
+    margin: 50px auto 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer__content {
+    margin: 61px auto 0;
+  }
 }
 @media screen and (min-width: 1024px) {
   .footer__content {
     max-width: 1180px;
     padding: 0 40px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .footer__copyright {
+    margin: 0 0 0 106px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer__copyright {
+    margin: 0 129px 0 0;
   }
 }
 .gallery {
@@ -655,6 +676,21 @@ body {
     margin: 0 13px 0 10px;
   }
 }
+.logo__image_gray {
+  width: 32px;
+  height: 36px;
+  margin: 0 13px 0 0px;
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .logo__image_gray {
+    margin: 0 13px 0 2px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .logo__image_gray {
+    margin: 0 13px 0 0;
+  }
+}
 .logo__text {
   display: block;
   font-family: "PT Sans Caption";
@@ -671,19 +707,21 @@ body {
 .logo__text_gray {
   margin-left: 0;
   color: #BFBFBF;
+  letter-spacing: 2.7px;
 }
 .logo__text_small_gray {
   color: #B3B3B3;
-  letter-spacing: 0.9px;
 }
-@media screen and (min-width: 320px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .logo__text_small_gray {
-    font-size: 10px;
+    font-size: 11px;
+    letter-spacing: 2px;
   }
 }
 @media screen and (min-width: 1024px) {
   .logo__text_small_gray {
     font-size: 12px;
+    letter-spacing: 1.5px;
   }
 }
 .main {

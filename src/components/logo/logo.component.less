@@ -33,6 +33,19 @@
             margin: 0 13px 0 10px;
         }
 
+        &_gray {
+            width: 32px;
+            height: 36px;
+            margin: 0 13px 0 0px;
+            //desktop - desktop_hd - 1
+            @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+                margin: 0 13px 0 2px;
+            }
+            //desktop_hd+
+            @media screen and (min-width: @sizes[desktop_hd]) {
+                margin: 0 13px 0 0;
+            }
+        }
     }
 
     &__text {
@@ -53,20 +66,24 @@
         &_gray {
             margin-left: 0;
             color: #BFBFBF;
+            
+        letter-spacing: 2.7px;
+
         }
 
         &_small_gray {
             color: #B3B3B3;
-            letter-spacing: 0.9px;
 
             //mobile - desktop - 1
-            @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[desktop] - 1) {
-                font-size: 10px;
+            @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+                font-size: 11px;
+                letter-spacing: 2px;
             }
 
             //desktop+
             @media screen and (min-width: @sizes[desktop]) {
                 font-size: 12px;
+                letter-spacing: 1.5px;
             }
         }
     }
