@@ -60,25 +60,25 @@
     &__text {
         color: #363B3C;
         font-family: "Didact Gothic";
-
+        //mobile - tablet
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             margin: 18px 0 23px 0;
             font-size: 15px;
             line-height: 1.34;
         }
-
+        //tablet - desktop
         @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
             margin: 17px 0 20px 0;
             font-size: 14px;
             line-height: 1.43;
         }
-
+        //desktop - desktop_hd
         @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
             margin: 19px 0 23px 0;
             font-size: 16px;
             line-height: 1.37;
         }
-
+        //desktop_hd +
         @media screen and (min-width: @sizes[desktop_hd]) {
             margin: 19px 0 27px 0;
             font-size: 16px;
@@ -87,18 +87,19 @@
     }
 
     &__button {
+        //mobile - tablet
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             display: none;
         }
-
+        //tablet - desktop
         @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
             padding: 12px 13px;
         }
-
+        //desktop - desktop_hd
         @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
             padding: 12px 15px;
         }
-
+        //desktop_hd +
         @media screen and (min-width: @sizes[desktop_hd]) {
             padding: 11px 25px;
         }
@@ -107,15 +108,15 @@
     &__image {
         position: relative;
         overflow: hidden;
-
+        //mobile - tablet
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             display: none;
         }
-
+        //tablet - desktop
         @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop_hd] - 1) {
             height: 534px;
         }
-
+        //desktop_hd +
         @media screen and (min-width: @sizes[desktop_hd]) {
             height: 528px;
         }

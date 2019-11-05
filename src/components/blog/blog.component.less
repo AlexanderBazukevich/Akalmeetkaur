@@ -1,4 +1,68 @@
 .blog {
-    margin: 0 20px 0 0;
     box-sizing: border-box;
+
+    //mobile - tablet
+    @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+        max-width: 280px;
+    }
+    //tablet - desktop
+    @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+        margin: 0 16px 0 0;
+        max-width: calc((100% - 32px) / 2);
+        min-width: 244px;
+    }
+    //desktop +
+    @media screen and (min-width: @sizes[desktop]) {
+        margin: 0 20px 0 0;
+        max-width: calc((100% - 60px) / 3);
+        min-width: 221px;
+    }
+
+    .blog__image {
+        width: 100%;
+    }
+    .blog__date {
+        color: #ACACAC;
+        font-family: "Didact Gothic";
+        font-size: 16px;
+        //mobile - tablet
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+            margin: 11px 0 4px 0;
+        }
+        //tablet - desktop
+        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+            margin: 16px 0px 12px 0;
+        }
+        //desktop - desktop_hd
+        @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+            margin: 15px 0 9px 0;
+        }
+        //desktop_hd +
+        @media screen and (min-width: @sizes[desktop_hd] - 1) {
+            margin: 20px 0 17px 0;
+        }
+
+    }
+    .blog__title {
+        margin: 0 0 46px 0;
+        color: #363B3C;
+        font-family: "PT Sans Caption";
+        font-size: 18px;
+        //mobile - tablet
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+            margin: 0 0 44px 0;
+        }
+        //tablet - desktop
+        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+            margin: 0px 0px 45px 0;
+        }
+        //desktop - desktop_hd
+        @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+            margin: 0 0 42px 0;
+        }
+        //desktop_hd +
+        @media screen and (min-width: @sizes[desktop_hd] - 1) {
+            margin: 0 0 46px 0;
+        }
+    }
 }
