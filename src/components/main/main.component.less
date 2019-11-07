@@ -1,6 +1,11 @@
 .main {
     margin: 0 auto;
 
+    //mobile - tablet
+    @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+        position: relative;
+    }
+    
     &__title {
         color: #363B3C;
         font-family: "PT Sans Caption";

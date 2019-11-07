@@ -1,8 +1,26 @@
 .sidebar {
     display: inline-block;
     vertical-align: top;
-    margin: 3px 0px 19px 0;
-    letter-spacing: 0.3px;
+
+    &_long {
+        margin: 3px 0px 19px 0;
+        letter-spacing: 0.3px;
+        //mobile - tablet
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+            display: none;
+        }
+    }
+
+    &_short {
+        position: absolute;
+        top: 4px;
+        right: 20px;
+        text-align: right;
+        //tablet +
+        @media screen and (min-width: @sizes[tablet]) {
+            display: none;
+        }
+    }
 
     &__title,
     &__item {
@@ -12,16 +30,23 @@
 
     &__title {
         font-family: "PT Sans Caption";
-        font-size: 18px;
+
+        //mobile - tablet
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+            margin: 0 0 18px 0;
+            font-size: 16px;
+        }
 
         //tablet - desktop
         @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
             margin: 0 0 18px 0;
+            font-size: 18px;
         }
 
         //desktop +
         @media screen and (min-width: @sizes[desktop]) {
             margin: 0 0 19px 0;
+            font-size: 18px;
         }
     }
 

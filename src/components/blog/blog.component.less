@@ -3,18 +3,20 @@
 
     //mobile - tablet
     @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
-        max-width: 280px;
+        margin: 0;
+        width: 280px;
     }
     //tablet - desktop
     @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
         margin: 0 16px 0 0;
-        max-width: calc((100% - 32px) / 2);
+        width: calc((100% - 32px) / 2);
         min-width: 244px;
     }
     //desktop +
     @media screen and (min-width: @sizes[desktop]) {
         margin: 0 20px 0 0;
-        max-width: calc((100% - 60px) / 3);
+        width: calc((100% - 60px) / 3);
+        max-width: 280px;
         min-width: 221px;
     }
 
@@ -44,10 +46,11 @@
 
     }
     .blog__title {
-        margin: 0 0 46px 0;
+        display: block;
         color: #363B3C;
         font-family: "PT Sans Caption";
         font-size: 18px;
+        text-decoration: none;
         //mobile - tablet
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             margin: 0 0 44px 0;
@@ -64,5 +67,7 @@
         @media screen and (min-width: @sizes[desktop_hd] - 1) {
             margin: 0 0 46px 0;
         }
+        // mixins
+        .link()
     }
 }
