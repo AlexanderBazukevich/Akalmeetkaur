@@ -3,9 +3,10 @@
     margin-top: 20px;
     box-sizing: border-box;
     background-color: #F2F2F2;
+
     //mobile - tablet
     @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
-        height: 248px;
+        min-height: 248px;
         width: 100%;
         padding: 22px 10px 0 30px;
     }
@@ -15,12 +16,12 @@
     }
     //tablet - desktop_hd
     @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop_hd] - 1) {
-        height: 300px;
+        min-height: 300px;
         padding: 54px 30px;
     }
     //desktop_hd +
     @media screen and (min-width: @sizes[desktop_hd]) {
-        height: 296px;
+        min-height: 296px;
         padding: 54px 30px;
     }
 

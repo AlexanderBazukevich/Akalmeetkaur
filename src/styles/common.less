@@ -1,32 +1,60 @@
+@import "../font-awesome-less/fontawesome.less";
+@import "../font-awesome-less/solid.less";
+@import "../font-awesome-less/brands.less";
+
+
 body {
     position: relative;
     margin: 0;
 
     background-position: center top;
     background-repeat: no-repeat;
-    opacity: .5;
+    // opacity: .5;
 
-    @media screen {
-        // desktop_hd
-        @media  (min-width: @sizes[desktop_hd]) {
-            background-image: url("/assets/index\(desktop_hd\).jpg");
-            background-size: @sizes[desktop_hd] auto;
-        }
-        // desktop
-        @media (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
-            background-image: url("/assets/index\(desktop\).jpg");
-            background-size: @sizes[desktop] auto;
-        }
-        // tablet
-        @media (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
-            background-image: url("/assets/index\(tablet\).jpg");
-            background-size: @sizes[tablet] auto;
-        }
-        // mobile
-        @media (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
-            background-image: url("/assets/index\(mobile\).jpg");
-            background-size: @sizes[mobile] auto;
-            background-position-y: -64px;
-        }
-    }
+    // @media screen {
+    //     // desktop_hd
+    //     @media  (min-width: @sizes[desktop_hd]) {
+    //         background-image: url("/assets/index\(desktop_hd\).jpg");
+    //         background-size: @sizes[desktop_hd] auto;
+    //     }
+    //     // desktop
+    //     @media (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+    //         background-image: url("/assets/index\(desktop\).jpg");
+    //         background-size: @sizes[desktop] auto;
+    //     }
+    //     // tablet
+    //     @media (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+    //         background-image: url("/assets/index\(tablet\).jpg");
+    //         background-size: @sizes[tablet] auto;
+    //     }
+    //     //mobile
+    //     @media (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+    //         background-image: url("/assets/index\(mobile\).jpg");
+    //         background-size: @sizes[mobile] auto;
+    //         background-position-y: -64px;
+    //     }
+
+        // screen {
+        //     //desktop_hd
+        //     @media  (min-width: @sizes[desktop_hd]) {
+        //         background-image: url("/assets/blog_hd.jpg");
+        //         background-size: @sizes[desktop_hd] auto;
+        //     }
+        //     // desktop
+        //     @media (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+        //         background-image: url("/assets/blog_desktop.jpg");
+        //         background-size: @sizes[desktop] auto;
+        //     }
+        //     // tablet
+        //     @media (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+        //         background-image: url("/assets/blog_tablet.jpg");
+        //         background-size: @sizes[tablet] auto;
+        //     }
+        //     //mobile
+        //     @media (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+        //         background-image: url("/assets/blog_mobile.jpg");
+        //         background-size: @sizes[mobile] auto;
+        //         background-position-y: -64px;
+        //     }
+    // }
 }

@@ -73,10 +73,10 @@
         }
     }
 
-    &__title {
-        position: relative;
+    &__wrapper {
         width: 100%;
         text-align: center;
+        overflow: hidden;
         color: #363B3C;
         font-family: "PT Sans Caption";
 
@@ -104,29 +104,28 @@
             font-size: 26px;
             letter-spacing: 0.4px;
         }
+    }
 
+    &__title {
+        position: relative;
         &:before,
         &:after {
-        position: absolute;
-        top: 50%;
-        content: "";
-        display: block;
-        height: 1px;
-        background-color: @accent-color-odd;
-            //mobile - tablet
-            @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
-                width: calc((100% - 250px) / 2);
-            }
-            //tablet +
-            @media screen and (min-width: @sizes[tablet]) {
-                width: calc((100% - 325px) / 2);
-            }
+            position: absolute;
+            top: 50%;
+            content: "";
+            display: block;
+            height: 1px;
+            width: 1000px;
+            background-color: @accent-color-odd;
         }
-
+        &:before {
+            left: 105%;
+        }
         &:after {
-            right: 0;
+            right: 105%;
         }
     }
+
     &__slider {
         display: flex;
         justify-content: space-between;
