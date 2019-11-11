@@ -1,16 +1,16 @@
 .social {
-    @media screen and (min-width: @sizes[desktop]) {
-        display: flex;
-    }
-
-    @media screen and (max-width: @sizes[desktop] - 1) {
-        display: none;
-    }
 
     &__link {
         display: block;
-        margin: 0 0 0 24px;
         color: #9D9D9D;
         font-size: 18px;
+
+        @media screen and (max-width: @sizes[desktop]) {
+            
+        }
+
+        @media screen and (min-width: @sizes[desktop]) {
+            margin: 0 0 0 24px;
+        }
     }
 }
