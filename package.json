@@ -6,7 +6,9 @@
   "dependencies": {
     "less": "^3.10.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2"
+  },
   "scripts": {
     "build": "lessc src/styles.less dist/styles.css"
   },
