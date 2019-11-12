@@ -10,19 +10,21 @@
         }
         //tablet - desktop
         @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+            min-height: 534px;
             padding: 71px 42px 0 42px;
         }
         //desktop - desktop_hd
         @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+            min-height: 534px;
             padding: 72px 72px 0 72px;
         }
         //desktop_hd +
         @media screen and (min-width: @sizes[desktop_hd] - 1) {
+            min-height: 528px;
             padding: 72px 70px 0 70px;
         }
         //tablet +
         @media screen and (min-width: @sizes[tablet]) {
-            min-height: 528px;
             max-width: 50%;
             width: 50%;
             box-sizing: border-box;

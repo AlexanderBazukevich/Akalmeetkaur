@@ -1,14 +1,21 @@
 .video {
     position: relative;
-    margin-top: 20px;
     box-sizing: border-box;
-    background-color: #F2F2F2;
+    background-image: url(/assets/images/photo_3_460w.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &_first {
+        background-color: #F2F2F2;
+        background-image: none;
+    }
 
     //mobile - tablet
     @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
         min-height: 248px;
         width: 100%;
-        padding: 22px 10px 0 30px;
+        padding: 22px 10px 26px 30px;
     }
     //tablet +
     @media screen and (min-width: @sizes[tablet]) {
@@ -17,7 +24,7 @@
     //tablet - desktop_hd
     @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop_hd] - 1) {
         min-height: 300px;
-        padding: 54px 30px;
+        padding: 54px 30px 34px;
     }
     //desktop_hd +
     @media screen and (min-width: @sizes[desktop_hd]) {
@@ -25,11 +32,18 @@
         padding: 54px 30px;
     }
 
-    &:nth-child(n+2) {
-        background-image: url(../assets/images/photo_3.png);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    &:nth-child(n + 2) {
+        //mobile - tablet
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+            margin-top: 20px;
+        }
+    }
+
+    &:nth-child(n + 3) {
+        //tablet +
+        @media screen and (min-width: @sizes[tablet]) {
+            margin-top: 20px;
+        }
     }
 
     &__overlay {

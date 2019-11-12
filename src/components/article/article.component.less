@@ -44,27 +44,36 @@
         align-items: flex-end;
         height: 2.5em;
         margin: 0 0 10px 0;
-        padding-right: 30%;
         color: @text-color;
         font-family: "PT Sans Caption";
         font-size: 18px;
 
+        //mobile - tablet
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+              padding-right: 20%;
+        }
+        //tablet +
+        @media screen and (min-width: @sizes[tablet]) {
+            padding-right: 30%;
+        }
             &:after {
                 position: absolute;
-                bottom: 0;
                 right: 0;
                 content: counter(articlecount);
                 color: #E9E9E9;
                 font-family: "Arial Black";
                 line-height: 0.9;
                 z-index: -1;
+
                 //mobile - tablet
                 @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
                     font-size: 78px;
+                    bottom: -3px;
                 }
                 //tablet +
                 @media screen and (min-width: @sizes[tablet]) {
                     font-size: 118px;
+                    bottom: -4px;
                 }
             }
     }

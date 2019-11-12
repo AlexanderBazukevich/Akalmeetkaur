@@ -1,14 +1,14 @@
 .gallery {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     counter-reset: cellcount;
 
     &__article {
-        justify-content: space-between;
 
         //mobile - tablet
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
-            padding-top: 48px;
+            padding-top: 53px;
         }
         //tablet - desktop
         @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
@@ -25,26 +25,26 @@
     }
 
     &__video {
-        justify-content: space-between;
 
         //mobile - tablet
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
-            padding-top: 46px;
+            padding-top: 66px;
         }
         //tablet - desktop
         @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
-            padding-top: 85px;
+            padding-top: 105px;
         }
         //desktop - desktop_hd
         @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
-            padding-top: 63px;
+            padding-top: 83px;
         }
         //desktop_hd +
         @media screen and (min-width: @sizes[desktop_hd] - 1) {
-            padding-top: 53px;
+            padding-top: 73px;
         }
     }
     &__blog {
+
         //mobile - tablet
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             align-items: center;
