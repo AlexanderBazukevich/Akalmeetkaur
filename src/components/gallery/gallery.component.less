@@ -75,7 +75,7 @@
 
     &__book {
         //mobile - tablet
-        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[desktop] - 1) {
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             align-items: center;
             flex-direction: column;
             width: 100%;
@@ -98,8 +98,8 @@
         }
         //desktop_hd +
         @media screen and (min-width: @sizes[desktop_hd]) {
-            margin-top: 8px;
-            width: calc(100% - 184px);
+            margin: 8px -4px 0 0;
+            width: calc(100% - 180px);
         }
     }
 
