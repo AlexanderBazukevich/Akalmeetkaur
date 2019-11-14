@@ -1,87 +1,100 @@
 .article {
-    counter-increment: articlecount;
-
-    @media screen and (min-width: @sizes[desktop]) {
-        max-width: calc((100% - 40px) / 3);
-    }
-
-    &:nth-child(n+5) {
-        //desktop - desktop_hd
-        @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
-            margin-top: 102px;
-        }
-        //desktop_hd +
-        @media screen and (min-width: @sizes[desktop_hd] - 1) {
-            margin-top: 120px;
-        }
+    //mobile - tablet
+    @media (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+        padding: 0;
     }
     //tablet - desktop
-    @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
-        max-width: calc((100% - 20px) / 2);
+    @media (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+        padding: 0 75px;
+    }
+    //desktop - desktop_hd
+    @media (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+        padding: 0 166px;
+    }
+    //desktop_hd +
+    @media (min-width: @sizes[desktop_hd]) {
+        padding: 0 200px;
+    }
 
-        &:nth-child(n+4) {
-            margin-top: 80px;
+    &__image {
+        height: auto;
+        width: 100%;
+        text-align: center;
+        font-size: 0;
+
+        //mobile - tablet
+        @media (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+            margin-bottom: 22px;
         }
-        &:nth-child(n+6) {
-            margin-top: 93px;
+        //tablet - desktop_hd
+        @media (min-width: @sizes[tablet]) and (max-width: @sizes[desktop_hd] - 1) {
+            margin-bottom: 24px;
+        }
+        //desktop_hd +
+        @media (min-width: @sizes[desktop_hd]) {
+            margin-bottom: 31px;
         }
     }
-    //mobile - tablet
-    @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
-        max-width: 100%;
 
-        &:nth-child(n+3) {
-            margin-top: 44px;
+    &__picture {
+        width: 100%;
+
+        &_top {
+            //mobile - tablet
+            @media (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+                max-width: 100%;
+            }
+            //tablet - desktop_hd
+            @media (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+                max-width: 38%;
+            }
+            //desktop - desktop_hd
+            @media (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+                max-width: 36%;
+            }
+            //desktop_hd +
+            @media (min-width: @sizes[desktop_hd]) {
+                max-width: 46%;
+            }
         }
-        &:nth-child(n+5) {
-            margin-top: 39px;
-        }
+    }
+
+    &__link {
+        display: block;
+        text-align: center;
     }
 
     &__title {
-        position: relative;
-        display: flex;
-        align-items: flex-end;
-        height: 2.5em;
-        margin: 0 0 10px 0;
-        color: @text-color;
+        margin: 17px 0 20px 0;
+        color: #363B3C;
         font-family: "PT Sans Caption";
-        font-size: 18px;
 
         //mobile - tablet
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
-              padding-right: 20%;
+            font-size: 20px;
+            letter-spacing: 0.31px;
         }
         //tablet +
         @media screen and (min-width: @sizes[tablet]) {
-            padding-right: 30%;
+            font-size: 26px;
+            letter-spacing: 0.4px;
         }
-            &:after {
-                position: absolute;
-                right: 0;
-                content: counter(articlecount);
-                color: #E9E9E9;
-                font-family: "Arial Black";
-                line-height: 0.9;
-                z-index: -1;
-
-                //mobile - tablet
-                @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
-                    font-size: 78px;
-                    bottom: -3px;
-                }
-                //tablet +
-                @media screen and (min-width: @sizes[tablet]) {
-                    font-size: 118px;
-                    bottom: -4px;
-                }
-            }
     }
 
     &__text {
-        margin: 0;
-        color: @text-color;
+        margin: 0 0 24px 0;
+        color: #363B3C;
         font-family: "Didact Gothic";
-        font-size: 16px;
+        letter-spacing: 0.01em;
+        line-height: 1.33;
+
+        //mobile - tablet
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+            font-size: 15px;
+        }
+        //tablet +
+        @media screen and (min-width: @sizes[tablet]) {
+            font-size: 16px;
+        }
     }
 }

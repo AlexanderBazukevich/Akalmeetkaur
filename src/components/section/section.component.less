@@ -36,6 +36,7 @@
     }
 
     &__picture {
+
         //mobile - tablet
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             margin: 0;
@@ -57,6 +58,7 @@
     &__content {
         width: 100%;
         box-sizing: border-box;
+
         //mobile - tablet
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             padding: 22px 0 0px 0;
@@ -84,6 +86,7 @@
         margin: 0;
         color: @text-color;
         font-family: "PT Sans Caption";
+
         //mobile - tablet
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             font-size: 20px;
@@ -145,11 +148,14 @@
     }
 
     &__purchase {
+
+        //mobile - desktop_hd
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[desktop_hd] - 1) {
+            margin: 0;
+        }
+        //desktop_hd +
         @media screen and (min-width: @sizes[desktop_hd]) {
             margin-right: 95px;
-        }
-        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[desktop] - 1) {
-            margin: 0;
         }
     }
 }

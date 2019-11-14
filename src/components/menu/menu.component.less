@@ -5,9 +5,9 @@
         text-decoration: none;
 
         // mixin
-        .link();
+        .link_bold();
 
-        // mobile to desktop - 1
+        // mobile to desktop
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[desktop] - 1) {
             display: block;
             font-size: 17px;
@@ -15,7 +15,6 @@
             padding: 0px 0px;
             margin: 0 0 48px 0;
         }
-
         // desktop+
         @media screen and (min-width: @sizes[desktop]) {
             display: inline-block;

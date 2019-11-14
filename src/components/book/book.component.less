@@ -1,5 +1,6 @@
 .book {
     box-sizing: border-box;
+
     //mobile - tablet
     @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
         margin: 0;
@@ -15,12 +16,14 @@
         margin-right: 20px;
         width: calc((100% - 40px) / 2);
     }
+
     &:nth-child(n + 2) {
         //mobile - tablet
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             margin-top: 40px;
         }
     }
+
     &:nth-child(n + 3) {
         //tablet - desktop
         @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
