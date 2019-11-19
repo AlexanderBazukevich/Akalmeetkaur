@@ -34,6 +34,12 @@
         @media (min-width: @sizes[desktop_hd]) {
             margin-bottom: 31px;
         }
+
+        &:nth-child(n + 2) {
+            @media (max-width: @sizes[tablet]) {
+                display: none;
+            }
+        }
     }
 
     &__picture {
