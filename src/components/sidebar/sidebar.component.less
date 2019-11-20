@@ -6,6 +6,10 @@
         margin: 3px 0px 19px 0;
         letter-spacing: 0.3px;
 
+        &_mobile {
+            display: block;
+        }
+
         //mobile - tablet
         @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
             display: none;
@@ -27,26 +31,28 @@
     &__title,
     &__item {
         display: block;
-        // color: @text-color;
     }
 
     &__title {
         font-family: "PT Sans Caption";
+        font-size: 18px;
 
-        //mobile - tablet
-        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+        //tablet - desktop
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[desktop] - 1) {
             margin: 0 0 18px 0;
-            font-size: 16px;
         }
         //tablet - desktop
-        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
-            margin: 0 0 18px 0;
-            font-size: 18px;
+        @media screen and (min-width: @sizes[desktop]) and (max-width: @sizes[desktop_hd] - 1) {
+            margin: 0 0 29px 0;
         }
         //desktop +
-        @media screen and (min-width: @sizes[desktop]) {
+        @media screen and (min-width: @sizes[desktop_hd]) {
             margin: 0 0 19px 0;
-            font-size: 18px;
+        }
+
+        &_short {
+            margin: 0 0 18px 0;
+            font-size: 16px;
         }
     }
 
@@ -55,16 +61,24 @@
         font-family: "Didact Gothic";
         text-decoration: none;
 
-        // mixin
-        .link_bold();
+        &_mobile {
+            // mixin
+            .link_bold();
+        }
 
-        //tablet - desktop
-        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+        //mobile - desktop
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[desktop] - 1) {
             margin: 0 0 20px 0;
         }
         //desktop +
         @media screen and (min-width: @sizes[desktop]) {
             margin: 0 0 19px 0;
         }
+        //tablet +
+        @media screen and (min-width: @sizes[tablet]) {
+            // mixin
+            .link_bold();
+        }
+
     }
 }
