@@ -4,6 +4,7 @@
 @accent-color-odd: #ACACAC;
 @active-color: #009592;
 @hover-color: #D0F3F3;
+// @headfoot-height: 87px;
 @sizes: {
     mobile: 320px;
     tablet: 768px;
@@ -24,19 +25,5 @@
     }
     // mobile
     @media (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
-    }
-}
-
-// MIXINS
-.link_bold() {
-    &:hover {
-        background-color: @hover-color;
-    }
-
-    &:active {
-        &:hover {
-            background-color: initial;
-        }
-        color: @active-color;
     }
 }

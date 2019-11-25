@@ -126,6 +126,14 @@
     &__picture {
         position: absolute;
         right: 50%;
-        transform: translateX(50%);
+
+        //tablet - desktop
+        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+            transform: translateX(40%);
+        }
+        //desktop +
+        @media screen and (min-width: @sizes[desktop]) {
+            transform: translateX(50%);
+        }
     }
 }
