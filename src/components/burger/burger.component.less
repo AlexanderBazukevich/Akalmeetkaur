@@ -3,9 +3,27 @@
     right: 0;
     top: 0;
     background-color: #F9F9F9;
-    background-image: url(/assets/interface/ic_menu_burger.svg);
+    background-image: url(../assets/interface/ic_menu_burger.svg);
     background-position: center center;
     background-repeat: no-repeat;
+    transition: 0.5s;
+    z-index: 1;
+
+    &_active {
+        position: fixed;
+        background-image: url(../assets/interface/ic_menu_burger.svg);
+        transition: 0.5s;
+        
+        //mobile - tablet -1
+        @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+            transform: translateX(-271px);
+        }
+
+        //tablet - desktop - 1
+        @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+            transform: translateX(-304px);
+        }
+    }
 
     //mobile - tablet -1
     @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {

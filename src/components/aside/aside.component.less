@@ -1,34 +1,47 @@
 .aside {
-    visibility: hidden;
-    position: fixed;
-    right: 0;
+    position: absolute;
     top: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
     box-sizing: border-box;
     background-color: #F9F9F9;
     z-index: 1;
-    
+    transition: 0.5s;
+
     //mobile - tablet
     @media (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
         width: 271px;
+        right: -271px;
         padding: 20px 30px 30px 20px;
     }
-    //tablet - desktop
-    @media (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+    //tablet +
+    @media (min-width: @sizes[tablet]) {
         width: 304px;
+        right: -304px;
         padding: 38px 42px 42px 44px;
+    }
+    //desktop +
+    @media (min-width: @sizes[desktop]) {
+        display: none;
+    }
+
+
+    &_active {
+        position: fixed;
+        right: 0;
+        transition: 0.5s;
     }
 
     &__menu {
         //mobile - tablet
         @media (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
-            margin: 0 0 0 53px;
+            margin: 0 0 auto 53px;
         }
         //tablet +
         @media (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
-            margin: 0;
+            margin: 0 0 auto 0;
         }
     }
 
