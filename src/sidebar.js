@@ -28,4 +28,4 @@ let aside = document.querySelector(".aside");
 
 burger.addEventListener("click", changeBurgerState);
 burger.addEventListener("click", changeAsideState);
-document.addEventListener("click", onClickClose);
+// document.addEventListener("click", onClickClose);
