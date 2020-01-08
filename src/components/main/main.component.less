@@ -5,19 +5,26 @@
 
     //mobile - tablet
     @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
-        margin: auto 0;
+        // margin: auto 0;
         
         &__overlay {
             position: fixed;
-            transition: all .5s;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: opacity .5s, background-color .5s, z-index .5s;
+            background-color: transparent;
+            z-index: -1;
 
             &_show {
-                //mixins
-                .back_overlay()
+                opacity: .5;
+                background-color: gray;
+                z-index: 100;
             }
         }
     }
-
 
     &__title {
         color: #363B3C;

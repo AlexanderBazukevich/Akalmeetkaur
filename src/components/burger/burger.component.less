@@ -2,19 +2,24 @@
     position: absolute;
     right: 0;
     top: 0;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+    color: #000000;
     background-color: #F9F9F9;
-    background-image: url(../assets/interface/ic_menu_burger.svg);
-    background-position: center center;
-    background-repeat: no-repeat;
 
     //mobile - tablet -1
     @media screen and (min-width: @sizes[mobile]) and (max-width: @sizes[tablet] - 1) {
+        font-size: 21px;
+        line-height: 49px;
         width: 49px;
         height: 49px;
     }
 
     //tablet - desktop - 1
     @media screen and (min-width: @sizes[tablet]) and (max-width: @sizes[desktop] - 1) {
+        font-size: 24px;
+        line-height: 62px;
         width: 62px;
         height: 62px;
     }
