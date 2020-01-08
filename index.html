@@ -4,119 +4,177 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="dist/styles.css">
         <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|PT+Sans+Caption:700&display=swap&subset=cyrillic" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Yoga online</title>
     </head>
     <body>
         <div class="header">
-            <div class="header__logo">
+            <div class="header__content">
                 <a class="logo" href="#">
-                    <img class="logo__image" src="/assets/images/logo_flower.svg">
-                    <span class="logo__name">alcameetkaur</span>
-                    <span class="logo__status">online</span>
+                    <img class="logo__image" src="./assets/images/logo_flower.svg">
+                    <div class="logo__text">
+                        <span class="logo__text logo__text_big logo__text_black">akalmeetkaur</span>
+                        <span class="logo__text logo__text_small_gray">online</span>
+                    </div>
                 </a>
+                <div class="menu header__menu">
+                    <a class="menu__item" href="#">О курсе</a>
+                    <a class="menu__item" href="video.html">Видео</a>
+                    <a class="menu__item" href="library.html">Библиотека</a>
+                    <a class="menu__item" href="blog.html">Блог</a>
+                </div>
+                <div class="social header__social">
+                    <a class="social__link" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social__link" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a class="social__link" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
-            <div class="menu">
-                <a class="menu__item" href="#">О курсе</a>
-                <a class="menu__item" href="#">Видео</a>
-                <a class="menu__item" href="#">Библиотека</a>
-                <a class="menu__item" href="#">Блог</a>
-            </div>
-            <div class="social">
-                <a class="social__link social__link_facebook" href="https://www.facebook.com/"></a>
-                <a class="social__link social__link_instagram" href="https://www.instagram.com/"></a>
-                <a class="social__link social__link_youtube" href="https://www.youtube.com/"></a>
-            </div>
+            <a class="burger" href="#"><i class="fas fa-bars"></i></a>
         </div>
         <div class="main">
             <div class="cover">
                 <div class="cover__content">
-                    <h1 class="cover__title">Онлайн курсы по Кундалини йоге</h1>
-                    <p class="cover__text">Кундалини йога - это тот мощный инструмент, который позволяет менять вашу жизнь независимо от внешних обстоятельств, вашего уровня знакомства с йогическими практиками и того, насколько вы верите в силу этой техники. На этом ресурсе вы сможете познакомиться с различными тематическими классами по Кундалини йоге, а также приобрести целый курс для решения только вашего, индивидуального запроса. Сат Нам!</p>
+                    <h1 class="cover__title">Онлайн курсы по&nbsp;Кундалини&nbsp;йоге</h1>
+                    <p class="cover__text">Кундалини йога - это тот мощный инструмент, который позволяет менять вашу жизнь независимо от внешних обстоятельств, вашего уровня знакомства с йогическими практиками и того, насколько вы верите в силу этой техники. На этом ресурсе вы сможете познакомиться с различными тематическими классами по Кундалини йоге, а также приобрести целый курс для решения только вашего, индивидуального запроса.<br> Сат Нам!</p>
                     <a class="button button_blue cover__button" href="#">Купить курс</a>
+                </div>
+                <div class="cover__image">
+                    <img class="cover__picture" src="assets/images/photo_1.png">
                 </div>
             </div>
             <div class="section">
-                <img class="section__image" src="assets/images/photo_2.png">
+                <div class="section__image">
+                    <picture class="section__picture">
+                        <source media="(max-width: 767px)" srcset="assets/images/photo_2_280w.jpg">
+                        <source media="(max-width: 1023px)" srcset="assets/images/photo_2_356w.jpg">
+                        <source media="(max-width: 1439px)" srcset="assets/images/photo_2_460w.jpg">
+                        <source media="(min-width: 1440px)" srcset="assets/images/photo_2_580w.jpg">
+                        <img src="assets/images/photo_2_580w.jpg">
+                    </picture>
+                </div>
                 <div class="section__content">
                     <h1 class="section__title">Вероника Голубенкова</h1>
                     <p class="section__text section__text_gray">преподаватель Кундалини йоги</p>
                     <p class="section__text">Начала заниматься йогой с 2010 года у Дарьи Прудниковой (Кундалини, Хатха, Аштанга).</p>
                     <p class="section__text">Прошла обучение в школе Кундалини Йоги АМРИТ НАМ САРОВАР и стала сертифицированным преподавателем Кундалини йоги Уровень I (KRI). Обучалась у Карта Сингха (Франция), Биби Нанаки Каур (Германия), Джоды Каур (Германия), Кальян Сингха (Александр Куликов, Россия), Амрит Садханы Каур (Татьяна Терентьева, Россия), Меэра Сингха (Алексей Меркулов, Россия), Прабу Джап Сингха (Алексей Владовский, Россия).</p>
-                    <p class="section__text">В 2013 году прошла курс випасаны в традиции Саяджи У Ба Кхина (С.Н.Гоенка) в Латвии.</p>
-                    <p class="section__text">В 2018 году закончила обучение на курсе подготовки учителей по Шакти Данс.</p>
+                    <p class="section__text">В 2013 году прошла курс випасаны в традиции Саяджи У Ба Кхина (С.Н.Гоенка) в Латвии.<br> В 2018 году закончила обучение на курсе подготовки учителей по Шакти Данс.</p>
                     <p class="section__text">Для Вероники йога - это способ жить счастливой и наполненной жизнью, в соответствии со своим внутренним миром и в состоянии полной гармонии. </p>
                 </div>
             </div>
-            <div class="grid">
-                <h1 class="grid__title">Причины пройти курс</h1>
-                <div class="element">
-                    <h2 class="element__title">Жить в Осознанности, быть здесь и сейчас</h2>
-                    <p class="element__text">Нет вчера, нет завтра, только то, что происходит с тобой сейчас - действительно ценно и имеет значение. Проживай этот момент, пропускай его через себя и осознавай каждой клеточкой</p>
+            <div class="gallery gallery__topic">
+                <h1 class="gallery__wrapper"><span class="gallery__title">Причины пройти курс</span></h1>
+                <div class="topic">
+                    <h2 class="topic__title">Жить в Осознанности, быть здесь и сейчас</h2>
+                    <p class="topic__text">Нет вчера, нет завтра, только то, что происходит с тобой сейчас - действительно ценно и имеет значение. Проживай этот момент, пропускай его через себя и осознавай каждой клеточкой</p>
                 </div>
-                <div class="element">
-                    <h2 class="element__title">Успокоить свой Ум</h2>
-                    <p class="element__text">Неспокойный ум порождает бесконтрольные мысли и эмоции, которые в свою очередь приводят к токсичным действиям. Спокойный ум ведет к внутренней гармонии и состоянию счастья не по причине, а вопреки</p>
+                <div class="topic">
+                    <h2 class="topic__title">Успокоить свой Ум</h2>
+                    <p class="topic__text">Неспокойный ум порождает бесконтрольные мысли и эмоции, которые в свою очередь приводят к токсичным действиям. Спокойный ум ведет к внутренней гармонии и состоянию счастья не по причине, а вопреки</p>
                 </div>
-                <div class="element">
-                    <h2 class="element__title">Наполниться внутренней энергией</h2>
-                    <p class="element__text">Раскрыть свой внутренний источник энергии и сил. Не нужен никакой внешней подпитки, нужно просто знать способы и техники, как пробудить то, что в нас заложено природой</p>
+                <div class="topic">
+                    <h2 class="topic__title">Наполниться внутренней энергией</h2>
+                    <p class="topic__text">Раскрыть свой внутренний источник энергии и сил. Не нужен никакой внешней подпитки, нужно просто знать способы и техники, как пробудить то, что в нас заложено природой</p>
                 </div>
-                <div class="element">
-                    <h2 class="element__title">Избавиться от вредных привычек</h2>
-                    <p class="element__text">Кундалини йога - мощнейший инструмент, который при постоянной практике полностью искореняет вредные привычки и закрывает дорогу к ним навсегда</p>
+                <div class="topic">
+                    <h2 class="topic__title">Избавиться от вредных привычек</h2>
+                    <p class="topic__text">Кундалини йога - мощнейший инструмент, который при постоянной практике полностью искореняет вредные привычки и закрывает дорогу к ним навсегда</p>
                 </div>
-                <div class="element">
-                    <h2 class="element__title">Решить то, что мешает быть счастливым</h2>
-                    <p class="element__text">Проблемы в взаимоотношениях, отсутствие любви к себе, нет процветания, страхи, внутренний гнев, привычные и не работающие паттерны поведения ума, гормональный дисбаланс все эти и многие</p>
+                <div class="topic">
+                    <h2 class="topic__title">Решить то, что мешает быть счастливым</h2>
+                    <p class="topic__text">Проблемы в взаимоотношениях, отсутствие любви к себе, нет процветания, страхи, внутренний гнев, привычные и не работающие паттерны поведения ума, гормональный дисбаланс все эти и многие</p>
                 </div>
-                <div class="element">
-                    <h2 class="element__title">Сохранить здоровье и молодость</h2>
-                    <p class="element__text">Сузествует множество техник, которые позволят вам значительно улучшить ваше здоровье, сохранить молодость и будут являться мощной профилактикой и защитой перед любыми заболеваниями</p>
+                <div class="topic">
+                    <h2 class="topic__title">Сохранить здоровье и молодость</h2>
+                    <p class="topic__text">Сузествует множество техник, которые позволят вам значительно улучшить ваше здоровье, сохранить молодость и будут являться мощной профилактикой и защитой перед любыми заболеваниями</p>
                 </div>
             </div>
-            <div class="gallery">
-                <div class="video">
-                    <h1 class="video__title">Видео</h1>
-                    <p class="video__text">Смотрите и практикуйте упражнения и медитации, изучайте инструкции к выполнению основных техник кундалини-йоги</p>
+            <div class="gallery gallery__video">
+                <div class="video video_first">
+                    <h1 class="video__title video__title_dark">Видео</h1>
+                    <p class="video__text video__text_dark">Смотрите и практикуйте упражнения и медитации, изучайте инструкции к выполнению основных техник кундалини-йоги</p>
                     <a class="button button_dark video__button" href="#">Все видео курса</a>
                 </div>
                 <div class="video">
+                    <i class="video__overlay"></i>
                     <h1 class="video__title">Приветствие</h1>
                     <p class="video__text">Начала заниматься йогой с 2010 года у Дарьи Прудниковой (Кундалини, Хатха, Аштанга).</p>
                     <a class="button button_light video__button" href="#">Смотреть видео</a>
                 </div>
                 <div class="video">
+                    <i class="video__overlay"></i>
                     <h1 class="video__title">Женские практики</h1>
                     <p class="video__text">Начала заниматься йогой с 2010 года у Дарьи Прудниковой (Кундалини, Хатха, Аштанга).</p>
                     <a class="button button_light video__button" href="#">Смотреть видео</a>
                 </div>
                 <div class="video">
+                    <i class="video__overlay"></i>
                     <h1 class="video__title">Избавление от гнева</h1>
                     <p class="video__text">Начала заниматься йогой с 2010 года у Дарьи Прудниковой (Кундалини, Хатха, Аштанга).</p>
                     <a class="button button_blue video__button" href="#">Купить видео</a>
                 </div>
             </div>
             <div class="section">
-                <img class="section__image" src="assets/images/photo_3.png">
+                <div class="section__image">
+                    <picture class="section__picture">
+                        <source media="(max-width: 1023px)" srcset="assets/images/photo_3_357w.jpg">
+                        <source media="(max-width: 1439px)" srcset="assets/images/photo_3_460w.jpg">
+                        <source media="(min-width: 1440px)" srcset="assets/images/photo_3_580w.jpg">
+                        <img src="assets/images/photo_3_580w.jpg">
+                    </picture>
+                </div>
                 <div class="section__content">
                     <h1 class="section__title">Видеокурс Кундалини йога для начинающих</h1>
                     <p class="section__text">В рамках этого курса вы познакомитесь с теоретическими и практическими основами Кундалини йоги, узнаете как правильно и безопасно практиковать самостоятельно, изучите основные техники и на собственном опыте прочувствуете, как эти техники работают и как их можно применять в повседневной жизни.</p>
                     <p class="section__text">Курс состоит из 7 видео уроков и полезных материалов, среди которых 2 фундаментальные последовательности Кундалини йоги для последующей регулярных самостоятельной практики.</p>
+                    <div class="purchase section__purchase">
+                        <h2 class="purchase__title">Цена курса: <span class="purchase__title purchase__title_blue">200 бел.руб.</span></h2>
+                        <div class="email purchase__email">
+                            <input class="email__input" type="email" placeholder="Введите ваш email">
+                            <p class="email__text">На этот email будут высланы инструкции</p>
+                        </div>
+                        <a class="button button_blue purchase__button" href="#">Купить курс</a>
+                    </div>
                 </div>
-                <div class="purchase">
-                    <h2 class="purchase__price">Цена курса: <span purchase__price_blue>200 бел.руб.</span></h2>
-                    <input class="textfield purchase__textfield" type="text">
-                    <a class="button button_blue purchase__button" href="#">Купить курс</a>
+            </div>
+            <div class="main__overlay"></div>
+        </div>
+        <div class="footer">
+            <div class="footer__content">
+                <a class="logo" href="#">
+                    <img class="logo__image logo__image_gray" src="./assets/images/logo_flower_gray.svg">
+                    <div class="logo__text">
+                        <span class="logo__text logo__text_big logo__text_gray">akalmeetkaur</span>
+                        <span class="logo__text logo__text_small_gray">online</span>
+                    </div>
+                </a>
+                <div class="copyright footer__copyright">Все материалы этого сайта принадлежат его владельцу.<br> Пожалуйста, согласуйте с автором перед использованием: <a class="copyright__link" href="#">akalmeetkaur@akalmeetkaur.by</a></div>
+                <i class="footer__item"></i>
+            </div>
+        </div>
+        <div class="aside aside_hidden">
+            <a class="aside__cleaner" href="#"><i class="fas fa-times"></i></a>
+            <div class="aside__content">
+                <div class="menu aside__menu">
+                    <a class="menu__item" href="#">О курсе</a>
+                    <a class="menu__item" href="video.html">Видео</a>
+                    <a class="menu__item" href="library.html">Библиотека</a>
+                    <a class="menu__item" href="blog.html">Блог</a>
+                </div>
+                <a class="logo" href="index.html">
+                    <img class="logo__image logo__image_gray" src="./assets/images/logo_flower_gray.svg">
+                    <div class="logo__text">
+                        <span class="logo__text logo__text_big logo__text_gray">akalmeetkaur</span>
+                        <span class="logo__text logo__text_small_gray">online</span>
+                    </div>
+                </a>
+                <div class="copyright aside__copyright">Все материалы этого сайта принадлежат его владельцу.<br> Пожалуйста, согласуйте с автором перед использованием: <a class="copyright__link" href="#">akalmeetkaur@akalmeetkaur.by</a></div>
+                <div class="social aside__social">
+                    <a class="social__link" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social__link" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a class="social__link" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
         </div>
-        <div class="footer">
-            <a class="logo" href="#">
-                <img class="logo__image logo__image_gray" src="/assets/images/logo_flower.svg">
-                <span class="logo__name logo__name_gray">alcameetkaur</span>
-                <span class="logo__status logo__status_gray">online</span>
-            </a>
-            <div class="copyright">Все материалы этого сайта принадлежат его владельцу. Пожалуйста, согласуйте с автором перед использованием: <a class="copyright__link" href="#">akalmeetkaur@akalmeetkaur.by</a></div>
-        </div>
+        <script src="./src/sidebar.js"></script>
     </body>
 </html>
